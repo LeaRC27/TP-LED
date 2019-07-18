@@ -1,0 +1,35 @@
+section{
+    background: #b3b3b3;
+    width: 75%;
+    margin: 5px auto 0px auto;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    overflow: auto;
+}
+footer{
+    width: 75%;
+    margin: 0px auto;
+}
+.columnas{
+    margin-left: 30px;
+}
+
+.columnas th{
+    padding: 20px;
+    width: 50%;
+    text-align: left;
+}
+.columnas td{
+    padding: 20px;
+    width: 50%;
+    text-align: left;
+}
+.columnas img{
+    width: 400px;
+}
+.titulo{
+    color: #525252;
+    font-size: 40px;
+    font-family: 'Destiny';
+    text-align: center;
+}

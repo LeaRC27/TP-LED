@@ -1,0 +1,40 @@
+section{
+    background: #b2b2b2;
+    width:75%;
+    margin: 5px  auto 0px auto;
+    padding: 30px 0px;
+    text-align: center;
+    overflow: auto;
+}
+footer{
+    width:75%;
+    margin: 0px auto;
+}
+
+#contacto{
+    padding-top: 5%;
+    padding-left: 5%;
+}
+#contacto table tr{
+    height: 40px;
+
+}
+
+#contacto table th{
+    width: 20%;
+}
+
+#contacto table td{
+    width: 45%;
+    text-align: left;
+}
+
+#btnConsulta{
+    padding: 5px;
+    background: #2655ce;
+    border: #000000;
+}
+
+#btnConsulta:hover{
+    background: #2729ce;
+}

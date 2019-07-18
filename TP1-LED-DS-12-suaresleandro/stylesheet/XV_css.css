@@ -1,0 +1,30 @@
+section{
+    background: #b3b3b3;
+
+    margin: 5px auto 0px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.columna2{
+    width: 50%;
+    float: left;
+}
+.columna3{
+    width: 33%;
+    float: left;
+}
+.album{
+
+    margin: 20px auto;
+    background: #474747;
+    width: 85%;
+    overflow: auto;
+}
+.book{
+    padding: 20px;
+    width: 90%;
+}
+.fiesta{
+    padding: 20px;
+    width: 90%;
+}

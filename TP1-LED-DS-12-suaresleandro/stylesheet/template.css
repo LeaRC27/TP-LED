@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Destiny';
+    src: url("../fonts/Destiny.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+
+    margin: 1%;
+    background-image: url(//patlee.net/blog/wp-content/themes/Avada/assets/images/patterns/pattern3.png);
+    background-repeat: repeat;
+
+}
+
+header{
+    top: 0px;
+    width: 100%;
+}
+
+.cabecera{
+    width: 75%;
+    margin: 0px auto;
+    height: 65px;
+
+    background: black;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-family: 'Destiny';
+    font-size: 50px;
+    font-weight: normal;
+
+    border-top-right-radius: 5px 5px;
+    border-top-left-radius:  5px 5px;
+    box-shadow: 15px -12px 26px 1px rgba(0,0,0,0.75);
+}
+nav{
+    width: 100%;
+}
+.navegacion{
+    display: flex;
+    width: 75%;
+    margin: 0px auto;
+
+    background: #787878;
+    border-bottom-right-radius: 5px 5px;
+    border-bottom-left-radius:  5px 5px;
+    box-shadow: 12px -15px 26px 1px rgba(0,0,0,0.75);
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu{
+    width: 70%;
+    float: left;
+}
+.menu li{
+    display: inline-block;
+}
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #b60caf;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+.menu li a:hover {
+    color: #1e26ce;
+}
+.submenu{
+    position: absolute;
+    background: #787878;
+    width: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    z-index: 50;
+}
+.submenu li {
+    float: left;
+}
+
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Open sans';
+    text-decoration: none;
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+.social{
+    width: 15%;
+    padding-left: 15%;
+    float: right;
+}
+.social li{
+    display: inline-block;
+}
+
+.social li a {
+    padding: 16px 5px;
+    text-decoration: none;
+}
+
+.social li a:hover {
+    padding: 10px 10px;
+    background: #352fff;
+}
+
+
+footer {
+    padding:20px 0px;
+    background: dimgray;
+    text-align: center;
+    color: #fff;
+}

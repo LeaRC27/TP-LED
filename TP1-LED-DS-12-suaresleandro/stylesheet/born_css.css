@@ -1,0 +1,41 @@
+section{
+    background: #b3b3b3;
+
+    margin: 5px auto 0px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: auto;
+}
+.collage{
+   margin-left: 1%;
+}
+
+.collage img{
+    width: 100%;
+}
+
+.col450{
+    width: 34%;
+    float:left;
+}
+.col400{
+    width: 30%;
+    float:left;
+}
+
+.albumborn{
+    overflow: auto;
+    margin-top: 4%;
+    margin-left: 8%;
+    width: 85%;
+    background: #5e5e5e
+}
+.col{
+    width: 50%;
+    float: left;
+}
+.albumborn img{
+    width: 85%;
+    float:left;
+    padding: 30px
+}
