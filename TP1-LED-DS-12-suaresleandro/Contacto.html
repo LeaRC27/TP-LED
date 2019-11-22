@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+          <link rel="stylesheet" href="stylesheet/template.css">
+          <link rel="stylesheet" href="stylesheet/contacto_css.css">
+          <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+          <script>
+                  function limita(maximoCaracteres){
+                        var elemento = document.getElementById("texto");
+
+                        if(elemento.value.length >= maximoCaracteres ) {
+                            document.getElementById("errortexto").innerHTML = "Ha alcanzado el limite de caracteres!!"
+                            return false;
+                        }else {
+                            return true;
+                        }
+                  }
+
+
+                  function validacion(){
+                        var name = document.getElementById("name").value
+                        if(name == null || name.length == 0){
+
+                            document.getElementById("errorname").innerHTML = "El campo Nombre es obligatorio"
+                            document.getElementById("name").focus();
+                            return false;
+                        }else if(!isNaN(name) || !/^[A-Za-z+\s]+$/i.test(name) ){
+                            document.getElementById("errorname").innerHTML = "Debe ingresar un Nombre"
+                            document.getElementById("name").focus();
+                            return false;
+                        }
+
+                        var email = document.getElementById("email").value
+                        if(email == null || email.length == 0){
+                            document.getElementById("erroremail").innerHTML = "El campo E-Mail es obligatorio"
+                            document.getElementById("email").focus();
+                            return false;
+                        }else if( /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+/.test(email) == false)  {
+                            document.getElementById("erroremail").innerHTML = "Debe ingresar una direccion de E-Mail valida"
+                            document.getElementById("email").focus();
+                            return false;
+                        }
+
+                        var phone = document.getElementById("tel").value
+                        if(!/^\d{10,11}$/.test(phone)  && !/^\d{3,4}\s\d{6,7}$/.test(phone)){
+                            document.getElementById("errortel").innerHTML = "Debe ingresar un numero de telefono valido"
+                            document.getElementById("tel").focus();
+                            return false;
+                        }
+
+                        var opciones = document.getElementsByName("opciones");
+                        var seleccionado = false;
+                        for(var i=0; i<opciones.length; i++) {
+                            if(opciones[i].checked) {
+                                seleccionado = opciones[i].value;
+                                break;
+                            }
+                        }
+                        if(!seleccionado) {
+                            document.getElementById("errorradio").innerHTML = "Debe seleccionar una opcion"
+                            opciones[0].focus();
+                            return false;
+                        }
+                        var texto = document.getElementById("texto").value
+                        if(texto.length == 0){
+                            document.getElementById("errortexto").innerHTML = "Indique su consulta"
+                            document.getElementById("texto").focus();
+                            return false;
+                        }
+
+                        return true;
+                  }
+          </script>
+          <header>
+                <h1 class="cabecera">Producciones Fotograficas</h1>
+          </header>
+          <nav>
+               <div class="navegacion">
+                    <ul class="menu">
+                         <li><a href="index.html">Inicio</a></li>
+                         <li><a href="#">Productos</a>
+                              <ul class="submenu">
+                               <li><a href="newborn.html">New Born</a></li>
+                               <li><a href="bodas.html">Bodas</a></li>
+                               <li><a href="XV.html">XV</a></li>
+                              </ul> </li>
+                         <li><a href="servicios.html">Servicios</a></li>
+                         <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <ul class="social">
+                         <li><a href="https://www.facebook.com/victorlopezfotografiasocial/" target="_blank" class="fa fa-facebook fa-1x"></a></li>
+                         <li><a href="https://twitter.com/VictorLopezPH" target="_blank" class="fa fa-twitter fa-1x"></a></li>
+                         <li><a href="https://www.instagram.com/victorlopezph/" target="_blank" class="fa fa-instagram fa-1x"></a></li>
+                         <li><a href="https://ve.linkedin.com/usuario" target="_blank" class="fa fa-linkedin fa-1x"></a></li>
+                         <li><a href="mailto:victorlopez.s@hotmail.com" class="fa fa-envelope-o"></a></li>
+                    </ul>
+               </div>
+          </nav>
+          <section>
+               <h2> Contact Me:</h2>
+               <form id="contacto" action="#" method="post" onsubmit="return validacion()">
+
+                    <table>
+                         <tbody>
+                             <tr>
+                                 <th></th>
+                                 <td><spam class="error" id="errorname"></spam></td>
+                             </tr>
+                             <tr>
+                                 <th>Nombre</th>
+                                 <td><input id="name" type="text"></td>
+                             </tr>
+                             <tr >
+                                 <th></th>
+                                 <td><spam class="error" id="erroremail"></spam></td>
+                             </tr>
+                             <tr>
+                                 <th>Email</th>
+                                 <td><input id="email" type="text"></td>
+                             </tr>
+                             <tr>
+                                 <th></th>
+                                 <td><spam class="error" id="errortel"></spam></td>
+                             </tr>
+                             <tr>
+                                 <th>Telefono</th>
+                                 <td><input id="tel" type="text"></td>
+                             </tr>
+                             <tr>
+                                 <th></th>
+                                 <td><spam class="error" id="errorradio"></spam></td>
+                             </tr>
+                             <tr>
+                                <th>Motivo de la consulta</th>
+                                <td><input type="radio" name="opciones" value="Disponibilidad">Disponibilidad <input type="radio" name="opciones" value="Presupuesto">Presupuesto</td>
+                             </tr>
+                             <tr>
+                                 <th></th>
+                                 <td><spam class="error" id="errortexto"></spam></td>
+                             </tr>
+                             <tr>
+                                 <th>Mensaje: </th>
+                                 <td><textarea id="texto" cols="40" rows="5" onkeypress="return limita(200);"></textarea></td>
+                             </tr>
+                             <tr>
+                                 <th></th>
+                                 <td><input id="btnConsulta" type="submit" value="Enviar Consulta" onclick="this.disable=true; this.value='Enviando..'"></td>
+                             </tr>
+                         </tbody>
+                    </table>
+               </form>
+          </section>
+          <footer>
+           <p>© All Rights Reserved <a href="s_leandroCV.html">Datos del desarrollador</a></p>
+          </footer>
+    </body>
+</html>

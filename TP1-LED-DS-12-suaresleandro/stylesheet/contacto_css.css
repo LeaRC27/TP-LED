@@ -16,7 +16,7 @@ footer{
     padding-left: 5%;
 }
 #contacto table tr{
-    height: 40px;
+    height: 20px;
 
 }
 
@@ -37,4 +37,7 @@ footer{
 
 #btnConsulta:hover{
     background: #2729ce;
+}
+.error{
+    color:red;
 }
